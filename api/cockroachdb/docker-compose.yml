@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  roach1:
+    container_name: roach1
+    image: cockroachdb/cockroach:latest
+    volumes:
+      - ./data/roach1:/cockroach/cockroach-data
+    command: start --insecure --join=roach1,roach2
+    ports:
+      - "26257:26257"
+      - "8080:8080"
+    networks:
+      - roachnet
+
+  roach2:
+    container_name: roach2
+    image: cockroachdb/cockroach:latest
+    volumes:
+      - ./data/roach2:/cockroach/cockroach-data
+    command: start --insecure --join=roach1,roach2
+    networks:
+      - roachnet
+
+networks:
+  roachnet:
+    driver: bridge
