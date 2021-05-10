@@ -14,4 +14,6 @@ public class Episode extends PanacheEntity {
     @Column
     public int chainID;
 
+
+
 }
