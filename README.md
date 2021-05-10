@@ -1,6 +1,6 @@
 # Doughpedia
 
-Purely pedagogical exercise to experiement with Quarkus, CockroachDB, and throwing the data at a simple frontend.
+Purely pedagogical exercise to experiment with Quarkus, CockroachDB, and the inevitable plan to throw it at a simple frontend.
 
 ## Quarkus API
 
