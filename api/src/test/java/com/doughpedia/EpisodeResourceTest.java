@@ -13,7 +13,7 @@ import static org.hamcrest.CoreMatchers.is;
 public class EpisodeResourceTest {
 
     @Test
-    public void testEpisodesEndpoint() {
+    public void testEmptyEpisodesEndpoint() {
         given()
           .when().get("/episodes")
           .then()
